@@ -110,9 +110,10 @@ a, li {
   padding: 1rem;
   display: flex;
   justify-content:space-around;
-  width: 100vw;
+  max-width: 100vw;
   overflow: none;
-  z-index: 2;
+  z-index: 50;
+  background-color: var(--bg-color-primary);
 }
 
 
@@ -159,7 +160,7 @@ a, li {
   } 
   .menu-content.active{
     position: fixed;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     flex-direction: column;
     justify-content: space-around; 
@@ -212,7 +213,4 @@ a, li {
     right: 15px;
     z-index: 10;
   }
-  
-
 }
-
