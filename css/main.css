@@ -36,7 +36,8 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.2;
+  font-size: 1.2rem;
 }
 
 /* A elements that don't have a class get default styles */
@@ -84,19 +85,19 @@ a, li {
 /* css variables */
 :root {
   --color-primary: #03989e;
-  --color-secondary: #050a30;
+  --color-secondary: hsl(233, 79%, 19%);
   --bg-color-primary: #111;
   --bg-color-secondary: aliceblue;
-  --transition: all .5s ease;
+  --transition: all .2s ease-in-out;
 }
 
 /* utility classes */
 
 .h2-heading {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 5rem 1rem;
   font-size: 3rem;
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .container {
@@ -109,6 +110,18 @@ a, li {
   width: 5rem;
   display: grid;
   place-items: center;
+}
+
+.nav-link {
+  font-size: larger;
+  border: var(--color-primary) solid 0px;
+}
+
+.nav-link:hover {
+  border-bottom: 3px solid var(--color-secondary);
+  color: var(--color-secondary);
+  cursor: pointer;
+  transition: var(--transition);
 }
 
 #nav-logo {
@@ -162,6 +175,7 @@ main {
 
 /* section about-me */
 .about-me-card {
+  margin-top: 5rem;
   background-color: var(--bg-color-secondary);
   color: var(--color-primary);
   display: grid;
@@ -175,7 +189,7 @@ main {
 }
 
 .about-me-card svg {
-  width: 1rem;
+  width: 1.2rem;
   display: block;
   margin-right: .5rem;
 }
@@ -188,12 +202,37 @@ main {
 .card-head img{
   width: 3rem;
   margin-right: 1rem;
+  padding: .5rem;
+  border-radius: 50%;
+  border: var(--color-primary) solid 2px;
 }
+
 
 .card-head {
   display: flex;
   align-items: center;
   margin-left: 2rem;
+}
+
+.card-head_social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 5rem;
+}
+
+.card-head_social-links a{
+  margin: 0rem 1rem;
+}
+
+.card-head_social-links i{
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.card-description h2 {
+  text-align: center;
+  padding: 0rem 0rem 1rem 0rem;
 }
 
 /*  footer */
