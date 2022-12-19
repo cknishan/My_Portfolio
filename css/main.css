@@ -191,6 +191,7 @@ main {
 
 .about-me-card_card-main {
   border-right: 2px solid var(--color-primary);
+  padding-right: .5rem;
 }
 
 .about-me-card svg {
@@ -223,7 +224,7 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
 .card-head_social-links a{
@@ -254,7 +255,8 @@ footer {
 
 /* media query */
 @media only screen and (max-width: 750px){
-
+  
+  /* nav bar */
   #nav-bar {
     justify-content: space-between;
   }
@@ -324,4 +326,31 @@ footer {
     right: 15px;
     z-index: 10;
   }
+
+  /* about card */
+  .about-me-card {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+    padding: 2rem 1rem 2rem 0rem;
+  }
+
+  .about-me-card_card-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-right: none;
+  }
+
+  .card-description div {
+    padding-left: 2rem;
+  }
+
+  .card-description h2 span{
+    margin-top: 6rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--color-primary);
+  }
+  
+
 }
