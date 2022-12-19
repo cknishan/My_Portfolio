@@ -28,8 +28,9 @@ ol[role='list'] {
 }
 
 /* Set core root defaults */
-html:focus-within {
+html{
   scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
 }
 
 /* Set core body defaults */
@@ -85,10 +86,11 @@ a, li {
 /* css variables */
 :root {
   --color-primary: #03989e;
-  --color-secondary: hsl(233, 79%, 19%);
+  --color-secondary: hsl(233, 88%, 32%);
   --bg-color-primary: #111;
   --bg-color-secondary: aliceblue;
-  --transition: all .2s ease-in-out;
+  --color-link: rgb(80, 170, 255);
+  --transition: .2s ease-in-out;
 }
 
 /* utility classes */
@@ -114,20 +116,31 @@ a, li {
 
 .nav-link {
   font-size: larger;
-  border: var(--color-primary) solid 0px;
+  color: var(--color-primary);
+  padding: 0 5px;
+  transition: var(--transition);
+  border: var(--color-link) solid 0px;
 }
 
 .nav-link:hover {
-  border-bottom: 3px solid var(--color-secondary);
-  color: var(--color-secondary);
+  border-bottom: 3px solid var(--color-link);
+  color: var(--color-link);
   cursor: pointer;
   transition: var(--transition);
 }
 
+
 #nav-logo {
+  border: var(--color-primary) solid 2px;
   padding: .5rem;
   border-radius: 50%;
-  border: var(--color-primary) solid 2px;
+  transition: var(--transition);
+}
+
+#nav-logo:hover {
+  padding: 0rem;
+  border: var(--color-primary) solid 0px;
+  transition: var(--transition);
 }
 
 #nav-bar{
@@ -151,14 +164,6 @@ a, li {
 }
 
 .menu-content li{
-  padding: 0 5px;
-}
-
-.menu-content li a{ 
-  padding: 0 5px;
-}
-
-.menu-content li a:hover{ 
   padding: 0 5px;
 }
 
@@ -227,7 +232,14 @@ main {
 
 .card-head_social-links i{
   font-size: 2rem;
-  color: var(--color-primary);
+  color: var(--color-link);
+  transition: var(--transition);
+}
+
+.card-head_social-links i:hover {
+  color: var(--color-link);
+  border-bottom: 2px solid var(--color-link);
+  transition: var(--transition);
 }
 
 .card-description h2 {
