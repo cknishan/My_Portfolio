@@ -271,7 +271,7 @@ main {
   margin: auto;
 }
 
-.projects-slider-wrapper {
+.projects-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: minmax(100px, auto);
@@ -310,6 +310,15 @@ main {
   font-size: 2rem;
 }
 
+/* skills */
+
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  gap: 2rem;
+  padding: 0rem 1rem;
+}
 
 /*  footer */
 footer {

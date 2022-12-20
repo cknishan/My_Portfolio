@@ -8,7 +8,7 @@ const projectsObj = [
         "github":"https://github.com/cknishan/To-Do-App"
     },
     {
-        "name":"Portfolio (Web Desings)",
+        "name":"Portfolio (Web Designs)",
         "img":"frontend_portfolio",
         "url":"https://cknishan.github.io/Portfolio-frontend-projects/",
         "github":"https://github.com/cknishan/Portfolio-frontend-projects"
@@ -30,7 +30,7 @@ const projectsObj = [
 
 
 
-const projects = document.querySelector('.projects-slider-wrapper')
+const projects = document.querySelector('.projects-wrapper')
 
 for (let i = 0; i < projectsObj.length; i++) {
     let cardTemplate = `
