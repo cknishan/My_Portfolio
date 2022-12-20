@@ -102,6 +102,10 @@ a, li {
   color: var(--color-primary);
 }
 
+.text-center {
+  text-align: center;
+}
+
 .container {
   max-width: 1000px;
   margin: auto;
@@ -161,6 +165,7 @@ a, li {
   display: flex;
   color: var(--color-primary);
   align-items: center;
+  transition: var(--transition);
 }
 
 .menu-content li{
@@ -248,6 +253,22 @@ main {
   padding: 0rem 0rem 1rem 0rem;
 }
 
+
+/* projects */
+
+#projects {
+  padding: 0rem 3rem;
+  margin: auto;
+}
+
+.projects-slider-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  gap: 2rem;
+}
+
+
 /*  footer */
 footer {
   padding: 10rem 0rem;
@@ -270,6 +291,7 @@ footer {
     top: 0;
     left: 100vw;
     overflow: scroll;
+    transition: var(--transition);
   } 
   .menu-content.active{
     position: fixed;
@@ -308,6 +330,7 @@ footer {
     height: 40px;
     width: 40px;
     border-radius: 50%;
+    transition: var(--transition);
   }
 
   .menu-btn.active{
@@ -325,6 +348,7 @@ footer {
     top: 30px;
     right: 15px;
     z-index: 10;
+    transition: var(--transition);
   }
 
   /* about card */
