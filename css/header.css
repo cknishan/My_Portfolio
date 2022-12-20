@@ -17,19 +17,19 @@
 }
 
 .side .title {
-  font-family: "Rubik", sans-serif;
   font-size: 6vw;
   margin: 0px 10vw;
   width: 80vw;
 }
 
 .side .fancy {
-  font-family: "Lobster", cursive;
+  font-family: 'Pacifico', cursive;
   font-size: 1.3em;
   line-height: 0.8em;
 }
 
 #left-side {
+  font-family: 'Indie Flower', cursive;
   background-color: var(--left-color);
   width: 60%;
   z-index: 2;
@@ -44,6 +44,7 @@
 }
 
 #right-side {
+  font-family: 'Indie Flower', cursive;
   background-color: var(--right-color);
 }
 
