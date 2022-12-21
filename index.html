@@ -135,23 +135,26 @@
         <!-- contact section -->
         <section class="container" id="contact">
             <h2 class="h2-heading">Get In Touch</h2>
-            <form id="contact-form">
+            <form id="contact-form" action="https://formsubmit.co/472df2b90af66592855d868f02f25d80" method="POST">
                 <div class="form-group">
-                    <label for="name" id="name-label">Name</label>
-                    <input type="text" id="name" required placeholder="Enter your name" autocomplete="off">
+                    <label for="name" id="name-label">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <label for="email" id="email-label">Email</label>
-                    <input type="email" id="email" autocomplete="off" required placeholder="Enter your email address">
+                    <label for="email" id="email-label">Email:</label>
+                    <input type="email" id="email" name="email" autocomplete="off" required
+                        placeholder="Enter your email address">
                 </div>
-
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text"  name="subject" autocomplete="off" required
+                        placeholder="Your Subject">
+                </div>
                 <div class="form-group">
                     <label for="message">Message:</label>
-                    <textarea name="comments" rows="12" cols="20" id="message"
+                    <textarea name="message" rows="12" cols="20" id="message"
                         placeholder="Please send me an email with your Name, Email address and your Message if you want to contact me"></textarea>
                 </div>
-
-
                 <div class="form-group">
                     <button type="submit" id="submit" class="submit-button">
                         Submit
