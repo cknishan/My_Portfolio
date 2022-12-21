@@ -28,7 +28,7 @@ ol[role='list'] {
 }
 
 /* Set core root defaults */
-html{
+html {
   scroll-behavior: smooth;
   scroll-padding-top: 3rem;
   /* font-family: 'Montserrat Alternates', sans-serif; */
@@ -67,9 +67,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -80,10 +80,12 @@ select {
   }
 }
 
-a, li {
+a,
+li {
   text-decoration: none;
   list-style: none;
 }
+
 /* reset ends */
 
 /* css variables */
@@ -100,7 +102,7 @@ a, li {
 
 .h2-heading {
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 4rem 1rem;
   font-size: 3rem;
   color: var(--color-primary);
 }
@@ -128,7 +130,7 @@ a, li {
 }
 
 /* nav bar styles */
-#nav-logo-link {  
+#nav-logo-link {
   width: 5rem;
   display: grid;
   place-items: center;
@@ -163,13 +165,13 @@ a, li {
   transition: var(--transition);
 }
 
-#nav-bar{
+#nav-bar {
   position: sticky;
   top: 0;
   font-size: 1.2rem;
   padding: 1rem;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   max-width: 100vw;
   overflow: none;
   z-index: 50;
@@ -177,19 +179,19 @@ a, li {
 }
 
 
-.menu-content{
+.menu-content {
   display: flex;
   color: var(--color-primary);
   align-items: center;
   transition: var(--transition);
 }
 
-.menu-content li{
+.menu-content li {
   padding: 0 5px;
 }
 
 
-#responsive-menu{
+#responsive-menu {
   display: none;
 }
 
@@ -226,7 +228,7 @@ main {
   align-items: center;
 }
 
-.card-head img{
+.card-head img {
   width: 3rem;
   margin-right: 1rem;
   padding: .5rem;
@@ -248,11 +250,11 @@ main {
   padding-top: 2rem;
 }
 
-.card-head_social-links a{
+.card-head_social-links a {
   margin: 0rem 1rem;
 }
 
-.card-head_social-links i{
+.card-head_social-links i {
   font-size: 2rem;
 }
 
@@ -281,7 +283,7 @@ main {
 .project-card {
   background-color: var(--bg-color-secondary);
   box-shadow: 0px 0px 0px var(--color-primary);
-  transition:  var(--transition);
+  transition: var(--transition);
   box-shadow: .8px .9px 3px grey;
 
 }
@@ -293,7 +295,7 @@ main {
 
 .project-card div:nth-child(2) {
   padding: 1rem;
-} 
+}
 
 .project-links {
   display: flex;
@@ -320,20 +322,79 @@ main {
   padding: 0rem 1rem;
 }
 
+/* form */
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: .81rem;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+
+label {
+  padding: .5rem;
+  font-weight: bolder;
+}
+
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  padding: .5rem;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border: 1px solid var(--bg-color-primary);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+#submit {
+  background-color: var(--bg-color-secondary);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: var(--color-link);
+  transition: var(--transition);
+  font-weight: bolder;
+}
+
+#submit:focus,
+#submit:hover {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  background-color: var(--color-link);
+  color: white;
+  transition: var(--transition);
+}
+
+
 /*  footer */
 footer {
-  padding: 10rem 0rem;
+  padding: 3rem 0rem;
 }
 
 /* media query */
-@media only screen and (max-width: 750px){
-  
+@media only screen and (max-width: 750px) {
+
   /* nav bar */
   #nav-bar {
     justify-content: space-between;
   }
-  
-  .menu-content{
+
+  .menu-content {
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -343,33 +404,34 @@ footer {
     left: 100vw;
     overflow: scroll;
     transition: var(--transition);
-  } 
-  .menu-content.active{
+  }
+
+  .menu-content.active {
     position: fixed;
     height: 100vh;
     width: 100vw;
     flex-direction: column;
-    justify-content: space-around; 
+    justify-content: space-around;
     top: 0;
-    left:30vw;
-    overflow: scroll; 
+    left: 30vw;
+    overflow: scroll;
     background-color: var(--bg-color-secondary);
     color: var(--color-primary);
     ;
   }
-  
-  .menu-content li{
+
+  .menu-content li {
     display: block;
     padding: 0 50px;
     margin-left: -12rem;
   }
 
-  #responsive-menu{
+  #responsive-menu {
     display: grid;
     place-items: center;
   }
 
-  .menu-btn{
+  .menu-btn {
     background: url("https://i.ibb.co/Km5Xy4T/menu.png");
     background-color: var(--color-primary);
     /* bg-color important to give after url...but why? */
@@ -384,9 +446,9 @@ footer {
     transition: var(--transition);
   }
 
-  .menu-btn.active{
+  .menu-btn.active {
     border-radius: 50%;
-    border: 2px solid white;    
+    border: 2px solid white;
     background: url("https://i.ibb.co/QfjyJp3/close.png");
     background-color: var(--color-primary);
     background-repeat: no-repeat;
@@ -421,11 +483,11 @@ footer {
     padding-left: 2rem;
   }
 
-  .card-description h2 span{
+  .card-description h2 span {
     margin-top: 6rem;
     padding-top: 1rem;
     border-top: 2px solid var(--color-primary);
   }
-  
+
 
 }

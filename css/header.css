@@ -55,3 +55,9 @@
 #right-side .fancy {
   color: white;
 }
+
+@media only screen and (max-width: 750px) {
+  .side .title {
+    font-size: 7vh;
+  }
+}
