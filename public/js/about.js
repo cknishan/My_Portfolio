@@ -1,8 +1,8 @@
 // "use strict";
 
 // Import supabase module
-const supabase = require('./supabase.js');
-// import supabase from "../../supabase.js";
+// const supabase = require('./supabase.js');
+import supabase from "./supabase.js";
 
 // const about = document.querySelector('.about-me')
 
