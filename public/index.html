@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
     <!-- js -->
-    <script type="module" src="js/about.js" defer></script>
+    <!-- <script type="module" src="js/about.js" defer></script> -->
     <script type="module" src="js/responsiveNav.js" defer></script>
     <script type="module" src="js/header.js" defer></script>
     <script type="module" src="js/projects.js" defer></script>
@@ -161,6 +161,53 @@
     <footer>
 
     </footer>
+
+
+    <script type="module">
+        // import dotenv from "dotenv"
+        // dotenv.config()
+        // // Now you can use the values from the .env file
+
+
+        // // const { createClient } = require('@supabase/supabase-js');
+        import { createClient } from '@supabase/supabase-js'
+
+        // const supabaseUrl = process.env.SUPABASE_URL;
+        // const supabaseKey = process.env.SUPABASE_KEY;
+
+        const SUPABASE_URL = "https://itjplwtxixmdulpqtgml.supabase.co"
+
+        const supabaseUrl = SUPABASE_URL;
+        const supabaseKey = SUPABASE_KEY;
+
+        const supabase = createClient(supabaseUrl, supabaseKey);
+        const about = document.querySelector('.about-me')
+        console.log(supabase, about)
+        about.innerHTML = `<p>sdfasdfasdfsfed</p>`
+
+        // Define an async function and use await inside it
+        const fetchData = async () => {
+            try {
+                const { data, error } = await supabase
+                    .from('about')
+                    .select('text');
+
+                if (error) {
+                    console.error('Error fetching data:', error.message);
+                } else {
+                    console.log('Fetched data:', data);
+                    data.forEach(element => {
+                        about.innerHTML = `<p>${element}</p>`
+                    })
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error.message);
+            }
+        };
+
+        // Call the async function
+        fetchData();
+    </script>
 </body>
 
 </html>
