@@ -4,7 +4,9 @@
 // const supabase = require('./supabase.js');
 import supabase from "./supabase.js";
 
-// const about = document.querySelector('.about-me')
+const about = document.querySelector('.about-me')
+console.log(about)
+about.innerHTML = `<p>sdfasdfasdfsfed</p>`
 
 // Define an async function and use await inside it
 const fetchData = async () => {
@@ -17,9 +19,9 @@ const fetchData = async () => {
             console.error('Error fetching data:', error.message);
         } else {
             console.log('Fetched data:', data);
-            // data.forEach(element => {
-            //     about.innerHTML = `<p>${element}</p>`
-            // })
+            data.forEach(element => {
+                about.innerHTML = `<p>${element}</p>`
+            })
         }
     } catch (error) {
         console.error('Error fetching data:', error.message);
