@@ -6,8 +6,8 @@ const icons = [
     "html5/html5-original-wordmark",
     "css3/css3-original-wordmark",
     "javascript/javascript-original",
-    "bootstrap/bootstrap-original-wordmark",
     "python/python-original-wordmark",
+    "bootstrap/bootstrap-original-wordmark",
     "tailwindcss/tailwindcss-original-wordmark",
     "git/git-original-wordmark",
     "c/c-original",
@@ -26,7 +26,9 @@ const icons = [
     "linux/linux-original",
     "latex/latex-original",
     "canva/canva-original",
-    // "vim/vim-original",
+    "svelte/svelte-original",
+    "java/java-original",
+    "postgresql/postgresql-original"
 ]
 
 for (let i = 0; i < icons.length; i++) {
